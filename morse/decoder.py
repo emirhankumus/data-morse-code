@@ -27,12 +27,12 @@ def decode(morse_text):
     """
     if not morse_text:
         return ""
-        
+
     # Morse metnini pipe (|) işaretine göre kelimelere böl
     morse_words = morse_text.split('|')
     # Her bir kelimeyi decode_word fonksiyonu ile çöz
     decoded_words = [decode_word(word) for word in morse_words]
-    
+
     # Kelimeleri aralarında birer boşluk olacak şekilde birleştir
     return " ".join(decoded_words)
 
@@ -47,3 +47,4 @@ if __name__ == "__main__":
     EXAMPLE_MORSE_TEXT = ".... ..|--. ..- -.-- ..."
     DECODED_TEXT = decode(EXAMPLE_MORSE_TEXT)
     print(f"Decoded Morse '{EXAMPLE_MORSE_TEXT}' to text: '{DECODED_TEXT}'")
+    
